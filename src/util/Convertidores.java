@@ -62,7 +62,12 @@ public class Convertidores {
             usuario.setApellidoPaterno(datos[2]);
             usuario.setApellidoMaterno(datos[3]);
             usuario.setCelular(datos[4]);
-            usuario.setFechaNacimiento(StringToDate(datos[5]));
+            
+            datos[5] = datos[5].replaceAll("_", "");
+            if (!"".equals(datos[5].trim()))
+                usuario.setFechaNacimiento(StringToDate(datos[5]));
+            else
+                usuario.setFechaNacimiento(null);
             usuario.setDireccion(datos[6]);
             usuario.setCorreo(datos[7]);
             usuario.setImagen(datos[8]);
