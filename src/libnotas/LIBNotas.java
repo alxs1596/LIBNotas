@@ -5,8 +5,6 @@
  */
 package libnotas;
 
-import clases.Calificaciones;
-import util.Convertidores;
 
 
 
@@ -23,9 +21,9 @@ public class LIBNotas {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        String res = servicios.Calificacion.getMatricula("72569020", 9);
-        
-        System.out.println(res);
+//        String res = servicios.Calificacion.getMatricula("72569020", 9);
+//        
+//        System.out.println(res);
 
         
         
