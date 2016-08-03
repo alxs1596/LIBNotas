@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.academico.ulasalle.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.academico.ulasalle.com" xmlns:intf="http://services.academico.ulasalle.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.academico.ulasalle.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getInasistencias">
+    <complexType>
+     <sequence>
+      <element name="dni" type="xsd:string"/>
+      <element name="periodo" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getInasistenciasResponse">
+    <complexType>
+     <sequence>
+      <element name="getInasistenciasReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getInasistenciasRequest">
+
+      <wsdl:part element="impl:getInasistencias" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getInasistenciasResponse">
+
+      <wsdl:part element="impl:getInasistenciasResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="inasistencias">
+
+      <wsdl:operation name="getInasistencias">
+
+         <wsdl:input message="impl:getInasistenciasRequest" name="getInasistenciasRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getInasistenciasResponse" name="getInasistenciasResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="inasistenciasSoapBinding" type="impl:inasistencias">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getInasistencias">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getInasistenciasRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getInasistenciasResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="inasistenciasService">
+
+      <wsdl:port binding="impl:inasistenciasSoapBinding" name="inasistencias">
+
+         <wsdlsoap:address location="http://academico.ulasalle.edu.pe:8080/services/services/inasistencias"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

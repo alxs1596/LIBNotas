@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-usuario" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/usuario"/>
+        <property name="wsdl-usuario" location="xml-resources/web-service-references/usuario/wsdl/academico.ulasalle.edu.pe_8080/services/services/usuario.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/usuario" destdir="${build.generated.dir}/jax-wsCache/usuario" wsdl="${wsdl-usuario}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://academico.ulasalle.edu.pe:8080/services/services/usuario?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-usuario}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/usuario"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/usuario">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-usuario" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/usuario"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/ulasalle/academico/services"/>
+    </target>
+    <target name="wsimport-client-calificacion" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/calificacion"/>
+        <property name="wsdl-calificacion" location="xml-resources/web-service-references/calificacion/wsdl/academico.ulasalle.edu.pe_8080/services/services/calificacion.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/calificacion" destdir="${build.generated.dir}/jax-wsCache/calificacion" wsdl="${wsdl-calificacion}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://academico.ulasalle.edu.pe:8080/services/services/calificacion?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-calificacion}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/calificacion"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/calificacion">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-calificacion" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/calificacion"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/ulasalle/academico/services"/>
+    </target>
+    <target name="wsimport-client-horario" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/horario"/>
+        <property name="wsdl-horario" location="xml-resources/web-service-references/horario/wsdl/academico.ulasalle.edu.pe_8080/services/services/horario.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/horario" destdir="${build.generated.dir}/jax-wsCache/horario" wsdl="${wsdl-horario}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://academico.ulasalle.edu.pe:8080/services/services/horario?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-horario}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/horario"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/horario">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-horario" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/horario"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/ulasalle/academico/services"/>
+    </target>
+    <target name="wsimport-client-inasistencias" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/inasistencias"/>
+        <property name="wsdl-inasistencias" location="xml-resources/web-service-references/inasistencias/wsdl/academico.ulasalle.edu.pe_8080/services/services/inasistencias.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/inasistencias" destdir="${build.generated.dir}/jax-wsCache/inasistencias" wsdl="${wsdl-inasistencias}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://academico.ulasalle.edu.pe:8080/services/services/inasistencias?wsdl" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-inasistencias}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/inasistencias"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/inasistencias">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-inasistencias" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/inasistencias"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/ulasalle/academico/services"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-usuario, wsimport-client-calificacion, wsimport-client-horario, wsimport-client-inasistencias"/>
+</project>

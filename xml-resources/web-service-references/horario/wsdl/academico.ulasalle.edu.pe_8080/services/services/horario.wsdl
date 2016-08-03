@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://services.academico.ulasalle.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://services.academico.ulasalle.com" xmlns:intf="http://services.academico.ulasalle.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://services.academico.ulasalle.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getHorario">
+    <complexType>
+     <sequence>
+      <element name="dni" type="xsd:string"/>
+      <element name="dia" type="xsd:int"/>
+      <element name="periodo" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHorarioResponse">
+    <complexType>
+     <sequence>
+      <element name="getHorarioReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getHorarioResponse">
+
+      <wsdl:part element="impl:getHorarioResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHorarioRequest">
+
+      <wsdl:part element="impl:getHorario" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="horario">
+
+      <wsdl:operation name="getHorario">
+
+         <wsdl:input message="impl:getHorarioRequest" name="getHorarioRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHorarioResponse" name="getHorarioResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="horarioSoapBinding" type="impl:horario">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getHorario">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHorarioRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHorarioResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="horarioService">
+
+      <wsdl:port binding="impl:horarioSoapBinding" name="horario">
+
+         <wsdlsoap:address location="http://academico.ulasalle.edu.pe:8080/services/services/horario"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
